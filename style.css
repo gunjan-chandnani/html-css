@@ -1,0 +1,164 @@
+body, h1, h2, h3, p, ul, li {
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-color: #f8f8f8; 
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+}
+
+.logo img {
+  max-width: 100px; 
+  height: auto;
+}
+
+ul {
+  list-style: none;
+  display: flex;
+}
+
+ul li {
+  margin-left: 20px; 
+}
+
+ul li a {
+  text-decoration: none;
+  color: #333; 
+  font-weight: bold;
+  font-size: 16px; 
+}
+
+ul li a:hover {
+  color: #ff6600; 
+}
+
+/* Adding pseudo-element for decorative bullet points before each link */
+ul li::before {
+  content: '• ';
+  color: #9c660f;
+  margin-right: 5px;
+  font-size: 14px;
+}
+
+.content {
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.content .textBox {
+  position: relative;
+  max-width: 600px;
+}
+
+.content .textBox h2 {
+  color: #333;
+  font-size: 2.5em;
+  line-height: 1.4em;
+  font-weight: 400;
+  margin-left: 10px;
+}
+
+/* Adding pseudo-element to underline the heading */
+.content .textBox h2::after {
+  content: '';
+  display: block;
+  width: 50px;
+  height: 3px;
+  background: #9c660f;
+  margin-top: 10px;
+}
+
+.content .textBox h2 span {
+  color: #9c660f;
+  font-size: 1.2em;
+  font-weight: 900;
+}
+
+.content .textBox p {
+  color: #333;
+  margin-left: 20px;
+}
+
+.content .textBox a {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 8px 20px;
+  background: #9c660f;
+  color: #fff;
+  border-radius: 40px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  text-decoration: none;
+  margin-left: 20px;
+}
+
+.content .imgBox {
+  width: 600px;
+  display: flex;
+  justify-content: flex-end;
+  padding-right: 50px;
+  margin-top: 50px;
+}
+
+.content .imgBox img {
+  max-width: 400px;
+}
+
+.thumb {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  margin-right: 0%;
+}
+
+.thumb li {
+  margin-right: 10px;
+  margin-bottom: 10px; 
+  transition: 0.5s;
+}
+
+.thumb li img {
+  width: 100px; 
+  height: auto;
+  border: 2px solid #ddd; 
+  border-radius: 5px;
+}
+
+.thumb li img:hover {
+  border-color: #ff6600;
+  transform: translateY(-15px);
+}
+
+.circle {
+  margin-top: 50px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #9c660f;
+  clip-path: circle(570px at right 800px);
+}
+
+/* Adding decorative circle with pseudo-element */
+.circle::before {
+  content: '';
+  position: absolute;
+  width: 150px;
+  height: 150px;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+  top: 50px;
+  right: 100px;
+  z-index: 1;
+}
